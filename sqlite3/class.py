@@ -1,4 +1,5 @@
-import sqlite3, sys, os
+# -*- coding: utf-8 -*-
+import sqlite3, sys
 
 
 # 数据库连接
@@ -101,7 +102,6 @@ def searchdb():
         searchdb()
 
 #是否继续进行操作的判断
-#option = [1]
 def cont():
     choice = input("选择是否要继续进行操作。(y or n)")
     if choice == 'y' or choice == "Y":
@@ -145,4 +145,4 @@ if __name__ == "__main__":
             sys.exit()
         else:
             print("输入的操作有误，重新输入！")
-            os.system("python class.py")
+            __name__ == "__main__"
