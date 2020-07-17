@@ -102,7 +102,7 @@ def searchdb():
         searchdb()
 
 #是否继续进行操作的判断
-def cont():
+def select_con():
     choice = input("选择是否要继续进行操作。(y or n)")
     if choice == 'y' or choice == "Y":
         pass
@@ -111,7 +111,7 @@ def cont():
         sys.exit()
     else:
         print("您的输入有误，请输入‘y’或者‘n’！（不区分大小写）")
-        cont()
+        select_con()
 
 
 # 程序
@@ -130,16 +130,16 @@ if __name__ == "__main__":
         choice = input(choiceshow)
         if choice == "添加":
             addinfo()
-            cont()
+            select_con()
         elif choice == "删除":
             deldb()
-            cont()
+            select_con()
         elif choice == "修改":
             alter()
-            cont()
+            select_con()
         elif choice == "查询":
             searchdb()
-            cont()
+            select_con()
         elif choice == "退出":
             print("Goodbye!")
             sys.exit()
