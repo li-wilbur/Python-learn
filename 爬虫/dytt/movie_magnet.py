@@ -66,6 +66,11 @@ dytt_worm_open = dytt_worm()
 file_choice = None
 num_choice = 1
 if __name__ == '__main__':
+    print("""
+        ===================获取电影磁力链接================
+        ==============电影下载网址：'www.dytt89.com'=======
+        =======所属分类：首页 > 电影 > 最新电影> 下载页面======""")
+
     choice_file = input("是否要将磁力链接保存到文件中（输入y保存）：")
     num_choice = int(input("请输入爬取页码范围(正整数)："))
 
@@ -77,9 +82,9 @@ if __name__ == '__main__':
         dytt_worm_open.magnet(file_choice)
         print("\n\n磁力保存完成，打开'movie.txt'和磁力下载软件即可复制下载。（如：迅雷、Bitcomet）")
     else:
-        dytt_worm_open.pull_page()
+        dytt_worm_open.pull_page(num_choice)
         dytt_worm_open.movieurl()
-        dytt_worm_open.magnet()
+        dytt_worm_open.magnet(file_choice)
 
     print("\n\n运行结束，感谢使用本工具！")
     end_time = time.time()
