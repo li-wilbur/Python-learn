@@ -42,7 +42,7 @@ class dytt_worm(object):
                 movie = url.get('title')
                 self.movie_url[movie] = "https://www.dy2018.com" + href
 
-    def magnet(self, choice=None):
+    def magnet(self, choice):
         # 拿到每部电影具体的磁力链接
         for movie_name, magnet_url in self.movie_url.items():
             if magnet_url == 'https://www.dy2018.com/i/101661.html':
@@ -60,6 +60,8 @@ class dytt_worm(object):
                 if str(choice) == 'y' or str(choice) == 'Y':
                     with open('movie.txt', 'a', encoding='gb2312') as file_obj:
                         file_obj.write(Re_magnet[0] + '\n')
+                else:
+                    pass
 
 
 dytt_worm_open = dytt_worm()
