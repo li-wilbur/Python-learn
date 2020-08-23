@@ -53,7 +53,7 @@ def Result(Trans_result):
     elif Trans_result["type"] == "ZH_CN2EN":
         print("中文转英文")
     else:
-        print("需测试")
+        print("")
     print("翻译的源文本： {}".format(Trans_result["src"]))
     print("翻译结果为： {}".format(Trans_result["text"]))
 
